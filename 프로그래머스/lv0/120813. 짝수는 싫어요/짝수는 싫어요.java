@@ -1,7 +1,11 @@
+import java.util.*;
+
 class Solution {
-    public int[] solution(int n) {
-        int j = 0;
+    public ArrayList solution(int n) {
+        
+/*                
         int[] answer = {};
+        int j = 0;
         if(n%2 == 0){
             answer = new int[n/2];
         }else {
@@ -13,7 +17,16 @@ class Solution {
             i++;
             j++;
         }
+*/
         
+        ArrayList<Integer> answer = new ArrayList<Integer>();
+        
+        for(int i=1; i<=n; i++){
+            if(i%2 == 1) {
+            	answer.add(i);
+            }
+        }
+                
         return answer;
     }
 }
