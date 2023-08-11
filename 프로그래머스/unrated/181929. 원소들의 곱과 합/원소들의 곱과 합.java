@@ -7,14 +7,10 @@ class Solution {
         
         for(int i=0; i<num_list.length; i++){
             multiplication *= num_list[i];
-        }
-        System.out.println(multiplication);
-        for(int i=0; i<num_list.length; i++){
             addition += num_list[i];
         }
-        System.out.println(addition);
         
-        if(multiplication<addition*addition){
+        if(multiplication<Math.pow(addition,2)){
             answer = 1;
         }else {
             answer = 0;
