@@ -12,11 +12,7 @@ class Solution {
         int sum2 = numbers[numbers.length-1]*numbers[numbers.length-2];
         
         //두 값을 비교해서 큰 값을 answer에 저장
-        if(sum1>sum2){
-            answer = sum1;
-        }else {            
-            answer = sum2;
-        }
+        answer = Math.max(sum1, sum2);
         
         return answer;
     }
