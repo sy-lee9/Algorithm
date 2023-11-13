@@ -18,15 +18,7 @@ class Solution {
             }
         }
         
-        //list의 사이즈 만큼 배열의 크기 지정
-        int[] answer = new int[list.size()];
-        
-        //배열의 크기만큼 for문 돌기
-        for(int i=0; i<answer.length; i++){
-            //list의 값을 가져와 배열에 담기
-            answer[i] = list.get(i);
-        }
-        
+        int[] answer = list.stream().mapToInt(i -> i).toArray();
         return answer;
     }
 }
