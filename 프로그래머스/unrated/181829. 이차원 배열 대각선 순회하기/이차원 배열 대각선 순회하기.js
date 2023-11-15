@@ -6,8 +6,7 @@ function solution(board, k) {
         //배열 안의 배열의 크기만큼 for문 돌기
         for(let j=0; j<board[i].length; j++){
             //배열의 값을 하나씩 가져와 k보다 작거나 같으면
-            let sum = i+j;
-            if(sum <= k){
+            if(i+j <= k){
                 //answer에 더하기
                 answer += board[i][j];
             }
