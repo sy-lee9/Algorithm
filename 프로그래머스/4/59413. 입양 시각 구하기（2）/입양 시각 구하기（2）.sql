@@ -1,0 +1,16 @@
+WITH AllHours AS (
+    SELECT LEVEL - 1 AS HOUR
+    FROM dual
+    CONNECT BY LEVEL <= 24
+)
+SELECT
+    ah.HOUR,
+    COUNT(ao.ANIMAL_ID) AS COUNT
+FROM
+    AllHours ah
+LEFT JOIN
+    ANIMAL_OUTS ao ON TO_CHAR(ao.DATETIME, 'HH24') = TO_CHAR(ah.HOUR, 'FM00')
+GROUP BY
+    ah.HOUR
+ORDER BY
+    ah.HOUR;
